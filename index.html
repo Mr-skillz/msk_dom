@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace </title>
+    <style>
+        body {
+            color: red;
+        }
+        
+        .sweet {
+            background-color: red;
+        }
+        
+        h1 {
+            background-color: green;
+            width: 10%;
+            /* transition: all 3s ease;
+            /* color: lime; */
+            transition: all 50s;
+        }
+    </style>
+</head>
+
+<body>
+    <video></video>
+    <h1>Msk Libery</h1>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <div class="div1">div 1</div>
+    <div class="div2">div 2</div>
+    <div class="div3">div 3</div>
+    <div class="div4">div 4</div>
+    <div class="div5">div 5</div>
+    <div class="div6">div 6</div>
+    <button id="btn1">btn 1</button>
+    <button id="btn2">btn 2</button>
+
+    <script src="./msk-lib/msk.js"></script>
+    <script>
+        // msk('h1').attr('tools', 'graoe');
+        const text = msk('.div1').innerHtml();
+        msk('.div6').on('click', (e) => {
+
+            msk('.div1').toggle('great')
+        })
+
+        msk('#btn1').on('click', (e) => {
+            const div = document.createElement('div');
+            div.textContent = 'hello';
+            var rad = Math.floor(Math.random() * 6);
+            msk(`.div${rad+1}`).hide();
+            msk('h1').prepend(div);
+        })
+
+        msk('#btn2').on('click', (e) => {
+            const div = document.createElement('div');
+            div.textContent = 'hello';
+            var rad = Math.floor(Math.random() * 6);
+            msk(`.div${rad+1}`).show();
+            msk('h1').append(div)
+        })
+    </script>
+</body>
+
+</html>
