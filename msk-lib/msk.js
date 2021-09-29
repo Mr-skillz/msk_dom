@@ -1,4 +1,4 @@
-function msc(text) {
+function msc(text = "welcome to msk library") {
     console.log(text);
 }
 
@@ -77,3 +77,5 @@ function MSK(method, url, data) {
 
     return promise;
 }
+
+msc()
